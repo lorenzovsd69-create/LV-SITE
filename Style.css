@@ -1,0 +1,217 @@
+/* CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --azul: #0a192f;
+    --azul-claro: #172a45;
+    --laranja: #ff6b35;
+    --laranja-hover: #e0531c;
+    --branco: #ffffff;
+    --cinza-claro: #f4f6f9;
+    --texto-escuro: #333333;
+}
+
+body {
+    background-color: var(--branco);
+    color: var(--texto-escuro);
+}
+
+/* CABEÇALHO */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: var(--azul);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.navbar .logo {
+    color: var(--branco);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar .logo span {
+    color: var(--laranja);
+}
+
+.navbar .menu a {
+    color: var(--branco);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar .menu a:hover {
+    color: var(--laranja);
+}
+
+.navbar .menu .btn-nav {
+    background-color: var(--laranja);
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.navbar .menu .btn-nav:hover {
+    background-color: var(--laranja-hover);
+    color: var(--branco);
+}
+
+/* SEÇÃO HERO */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, var(--azul) 60%, var(--azul-claro));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    color: var(--branco);
+    margin-top: 60px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content .highlight {
+    color: var(--laranja);
+}
+
+.hero-content p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    opacity: 0.9;
+}
+
+.btn-main {
+    display: inline-block;
+    background-color: var(--laranja);
+    color: var(--branco);
+    padding: 14px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.btn-main:hover {
+    background-color: var(--laranja-hover);
+    transform: translateY(-3px);
+}
+
+/* SERVIÇOS */
+.services {
+    padding: 80px 8%;
+    background-color: var(--cinza-claro);
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: var(--azul);
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--branco);
+    padding: 40px 30px;
+    border-radius: 8px;
+    width: 350px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card .icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: var(--azul);
+}
+
+.card p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* SOBRE */
+.about {
+    padding: 80px 8%;
+    text-align: center;
+    background-color: var(--branco);
+}
+
+.about h2 {
+    font-size: 36px;
+    color: var(--azul);
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* RODAPÉ */
+footer {
+    background-color: var(--azul);
+    color: var(--branco);
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 14px;
+}
+
+footer p {
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+/* RESPONSIVIDADE (CELULAR) */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 5%;
+    }
+    .navbar .menu a:not(.btn-nav) {
+        display: none; /* Simplificação para o menu mobile */
+    }
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    .hero-content p {
+        font-size: 16px;
+    }
+}
